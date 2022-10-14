@@ -7,22 +7,11 @@ a Wikipedia article for the associated term. If the term is not known, tell the 
 Accept repeated user input until they quit. 
 
 When you run the program it should have a welcome section and be nicely formatted. When ran from the terminal it should open a seperate website
-example:  firefox https:wikipedia.strings & 
+
+
 Look up sleep function to delay firefox opening. 
 
-[Each term its own glossary?]
-[Provide user a list of terms]
-[yes/no to open webpage]
-[Provide a list of known terms]
-[split glossary into multiple dictionaries]
-[use a list to reference glossary]
-Use one for loop. One while loop. One if else statement.
 
-##### PLACEHOLDER WEBSITE IF STATEMENT #######
-
-userYesNo = input("\n Would you like to know more? [yes/no]" + "\n")
-        if userYesNo == 'yes':
-            webbrowser.open('https://www.google.com/')
 
 """
 
@@ -31,7 +20,7 @@ userYesNo = input("\n Would you like to know more? [yes/no]" + "\n")
 import webbrowser
 
 
-print("\n### Programming Language Glossary ###\n" + "\nHere are some terms that I know: " + "\n" +
+print("\n@@@### Programming Language Glossary ###@@@\n" + "\nHere are a few of the terms that I know: " + "\n" +
 "\n\t- String" + "\n\t- Int" + "\n\t- Dictionary" + "\n\t- Cast" + "\n\t- For loop" + '\n')
 
 
@@ -67,29 +56,30 @@ url = {
 
 ###Asks the user for a definition### 
 
-userInput = input("Enter the term you would like to know the definition of, when finished enter 'end':").lower().strip()
+userInput = input("Enter the term you would like to know the definition of, when finished enter 'end' to quit the program: ").lower().strip()
 
 
 
-###This while loop will continue prompting the user for definitions until they enter 'end'. The if statement will print the corresponding definition if it's in the glossary###
+###This while loop will continue prompting the user for definitions until they enter 'end'. The if statement will print the corresponding definition if it's in the glossary, the nested if statement asks the
+# user if they want to open a webpage. If userInput is yes###
 while userInput != 'end':
     if userInput in glossary:
         print("\nHere is the definition of " + userInput + "! " + "\n\t" + glossary[userInput])
-        userYesNo = input("\n Would you like to know more about " + userInput + "? [yes/no]" + "\n")
+        userYesNo = input("\n Would you like to know more about '" + userInput + "'? [yes/no]" + "\n").lower().strip()
         if userYesNo == 'yes':
             webbrowser.open(url[userInput])
-        userInput = input("\nWhat else would you like to know? Enter 'end' when finished: ").lower().strip()       
+        userInput = input("\nWhat other term would you like to know?: ").lower().strip()       
     else:
         print("\nSorry, my programmer didn't provide me with the definition of " + userInput + ". ")
-        userYesNo = input("\n Would you like to google that? [yes/no]" + "\n")
+        userYesNo = input("\n Would you like to google that? [yes/no]" + "\n").lower().strip()
         if userYesNo == 'yes':
             webbrowser.open('www.google.com')
-        userInput = input("\nWhat else would you like to know? Enter 'end' when finished: ").lower().strip()
+        userInput = input("\nWhat other term would you like to know?: ").lower().strip()
 
 
 
 #Closing statement
-print('\n ### I hope you learned something useful today! ###')
+print('\n ### I hope you learned something useful today! ###' + "\n ")
 
 
 
