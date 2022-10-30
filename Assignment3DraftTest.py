@@ -41,8 +41,8 @@ glossary = {
 }
 
 url = {
-    'string': 'https://en.wikipedia.org/wiki/String_(computer_science)',
-    'int': 'https://en.wikipedia.org/wiki/Integer_(computer_science)', 
+    'string'        : 'https://en.wikipedia.org/wiki/String_(computer_science)',
+    'int'           : 'https://en.wikipedia.org/wiki/Integer_(computer_science)', 
     'dictionary'    :'https://en.wikipedia.org/wiki/Associative_array',
     'concatenate'   :'https://en.wikipedia.org/wiki/Concatenation',
     'list'          :'https://en.wikipedia.org/wiki/List_(abstract_data_type)',
