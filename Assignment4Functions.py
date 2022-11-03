@@ -3,14 +3,33 @@
 import sqlite3
 from sqlite3 import Error 
 
-sql_create_projects_table = """ CREATE TABLE IF NOT EXISTS projects (
+
+def create_table_for_projects(conn):
+    """ create a table from the create_table_sql statement
+    :param conn: Connection object
+    :param create_table_sql: a CREATE TABLE statement
+    :return:
+    """
+    sql_create_projects_table = """ CREATE TABLE IF NOT EXISTS projects (
                                         id integer PRIMARY KEY,
                                         name text NOT NULL,
                                         begin_date text,
                                         end_date text
                                     ); """
+    # conn = create_connection(r"ass4.db")
+    try:
+        c = conn.cursor()
+        c.execute(sql_create_projects_table)
+    except Error as e:
+        print(e)
 
-sql_create_tasks_table = """CREATE TABLE IF NOT EXISTS tasks (
+def create_table_for_tasks(conn):
+    """ create a table from the create_table_sql statement
+    :param conn: Connection object
+    :param create_table_sql: a CREATE TABLE statement
+    :return:
+    """
+    sql_create_tasks_table = """CREATE TABLE IF NOT EXISTS tasks (
                                     id integer PRIMARY KEY,
                                     name text NOT NULL,
                                     priority integer,
@@ -20,7 +39,12 @@ sql_create_tasks_table = """CREATE TABLE IF NOT EXISTS tasks (
                                     end_date text NOT NULL,
                                     FOREIGN KEY (project_id) REFERENCES projects (id)
                                 );"""
-
+    conn = create_connection(r"ass4.db")
+    try:
+        c = conn.cursor()
+        c.execute(sql_create_tasks_table)
+    except Error as e:
+        print(e)
 
 def create_connection(db_file):
     """ create a database connection to the SQLite database
@@ -36,18 +60,6 @@ def create_connection(db_file):
         print(e)
 
     return conn
-
-def create_connection(db_file):
-    """ create a database connection to a SQLite database """
-    conn = None
-    try:
-        conn = sqlite3.connect(db_file)
-        print(sqlite3.version)
-    except Error as e:
-        print(e)
-    finally:
-        if conn:
-            conn.close()
 
 def create_table(conn, create_table_sql):
     """ create a table from the create_table_sql statement
@@ -145,6 +157,21 @@ def select_all_tasks(conn):
     for row in rows:
         print(row)
 
+def select_all_projects(conn):
+    """
+    Query all rows in the tasks table
+    :param conn: the Connection object
+    :return:
+    """
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM projects")
+
+    rows = cur.fetchall()
+
+    for row in rows:
+        print(row)
+
+
 def select_task_by_priority(conn, priority):
     """
     Query tasks by priority
@@ -163,11 +190,37 @@ def select_task_by_priority(conn, priority):
 if __name__ == '__main__':
     create_connection(r"sqlitetut2.db")
 
+# def create_connection(db_file):
+#     """ create a database connection to a SQLite database """
+#     conn = None
+#     try:
+#         conn = sqlite3.connect(db_file)
+#         print(sqlite3.version)
+#     except Error as e:
+#         print(e)
+#     finally:
+#         if conn:
+#             conn.close()
+
+# Take STRING FROM INPUT AND PUT IN TUPLE
+
 
 #create projects table, return projects table, 
 
 
 #create a new project
-# project = ('Andre App with Python and SQL', '2015-01-01', '2015-01-30')
-# project_id = f.create_project(conn, project)
+#  project = ('Andre App with Python and SQL', '2015-01-01', '2015-01-30')
+#  project_id = f.create_project(conn, project)
 
+## tasks tings
+
+
+
+
+# tasks (the 1,1,2, (2 column selects the project ID))
+    # task_1 = ('Complete the third task', 1, 1, 2, '2015-01-01', '2015-01-02')
+    # task_2 = ('Complete the fourth task', 1, 1, 2, '2015-01-03', '2015-01-05')
+
+# create tasks
+    # f.create_task(conn, task_1)
+    # f.create_task(conn, task_2)
