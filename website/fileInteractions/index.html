@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File Interactions &mdash; Programming 1700 1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom_styles.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CSV with Python" href="csv.html" />
+    <link rel="prev" title="pygame Package" href="../modulesPackages/pythonPackages/pygame.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Programming 1700
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../variables_data_types/index.html">Variables and Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slicing/index.html">Slicing Python Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../control_statements/index.html">Control Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functionsAndClasses/index.html">Functions &amp; Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modulesPackages/index.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">File Interactions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="csv.html">CSV with Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="json.html">JSON with Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xml.html">XML with Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="databases.html">Databases with Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/index.html">Programming Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Programming 1700</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>File Interactions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/fileInteractions/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-interactions">
+<h1>File Interactions<a class="headerlink" href="#file-interactions" title="Permalink to this heading"></a></h1>
+<p>Writing stand-alone programs is fun, but programming gets a lot more fun and interesting when we deal with persistent data. This section of the website will contain info about how to interact with four (4) common types of files - CSV, JSON, XML and databases.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="csv.html">CSV with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="json.html">JSON with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xml.html">XML with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">Databases with Python</a></li>
+</ul>
+</div>
+<section id="using-basic-txt-files">
+<h2>Using Basic <code class="code highlight p python docutils literal highlight-python"><span class="n">txt</span></code> Files<a class="headerlink" href="#using-basic-txt-files" title="Permalink to this heading"></a></h2>
+<figure class="align-default" id="id1">
+<a class="reference external image-reference" href="https://youtu.be/4mX0uPQFLDU"><img alt="Text Files in Python" src="https://img.youtube.com/vi/4mX0uPQFLDU/maxresdefault.jpg" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-text">Text Files in Python</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>To open a standard text file in Python, use the <code class="code highlight p python docutils literal highlight-python"><span class="nb">open</span><span class="p">()</span></code> method.  The most basic way to do this is to by setting a variable equal to the open method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;mySampleTextFile.txt&quot;</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>At this point, if the programmer were to print the contents of <code class="code highlight p python docutils literal highlight-python"><span class="n">text</span></code> (<code class="code highlight p python docutils literal highlight-python"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></code>) then whatever is written in the text file would be printed to standard output.</p>
+<p>There is, however, a more robust way to open a file that doesn’t require explicit closing and will not cause corruption if there is an error before the file is closed (or the programmer forgets to close it!).  This is done using the <code class="code highlight p python docutils literal highlight-python"><span class="k">with</span></code> keyword:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;mySampleTextFile.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fileObject</span><span class="p">:</span>
+    <span class="n">myText</span> <span class="o">=</span> <span class="n">fileObject</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The advantage of this method (other than it is a little shorter) is that Python will handle any exception that occurs and will close the file automatically. This means that even if an exception occurs or something goes wrong, the file gets closed (meaning it is safe from corruption and the computer’s memory is managed properly).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Attempting to open a file that doesn’t exist will throw an <code class="code highlight p python docutils literal highlight-python"><span class="n">Error</span></code> unless explicitly handled.</p>
+</div>
+<p>The <code class="code highlight p python docutils literal highlight-python"><span class="nb">open</span></code> function accepts several arguments, the first being the filename, and the second being the file “mode”.  Possible modes include <code class="code highlight p python docutils literal highlight-python"><span class="n">r</span></code> (read), <code class="code highlight p python docutils literal highlight-python"><span class="n">w</span></code> (write), and <code class="code highlight p python docutils literal highlight-python"><span class="n">a</span></code> (append).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="code highlight p python docutils literal highlight-python"><span class="nb">open</span></code> method accepts more arugments, this discussion isn’t exhaustive.</p>
+</div>
+<p>When opening a file in write mode, Python will overwrite the file if it exists already, and will create the file if it doesn’t.  As an example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">motorcycles</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;kawasaki&#39;</span><span class="p">,</span> <span class="s1">&#39;honda&#39;</span><span class="p">,</span> <span class="s1">&#39;ducatti&#39;</span><span class="p">,</span> <span class="s1">&#39;bmw&#39;</span><span class="p">,</span> <span class="s1">&#39;suzuki&#39;</span><span class="p">]</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;motorcycles.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">motorcycle</span> <span class="ow">in</span> <span class="n">motorcycles</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">motorcycle</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span> <span class="c1"># each entry on its own line</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">motorcycle</span><span class="p">)</span> <span class="c1"># all entries together, no spaces or line breaks</span>
+</pre></div>
+</div>
+<p>As mentioned above, the default behaviour of <code class="code highlight p python docutils literal highlight-python"><span class="s2">&quot;w&quot;</span></code> is to overwrite the file, thereby losing anything that was pre-existing in the file.  While this is advantageous in some circumstances, a more cautious apprach would be to use <code class="code highlight p python docutils literal highlight-python"><span class="s2">&quot;a&quot;</span></code> (append), which simply writes to the end of the file.  Append will also create the file if it doesn’t exist, so it is usually the better choice unless the requirement is explicitly to overwrite existing text files.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../modulesPackages/pythonPackages/pygame.html" class="btn btn-neutral float-left" title="pygame Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="csv.html" class="btn btn-neutral float-right" title="CSV with Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Brad Penney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

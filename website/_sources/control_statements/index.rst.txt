@@ -1,0 +1,20 @@
+.. role:: p(code)
+   :language: python
+
+
+Control Statements
+==================
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Logic
+
+    ifStatements
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Looping
+   
+   forLoops
+   whileLoops
+   loopingOverAFunction

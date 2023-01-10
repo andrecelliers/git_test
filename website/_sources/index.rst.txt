@@ -1,0 +1,37 @@
+.. role:: p(code)
+   :language: python
+
+Welcome to Programming 1700 - Logic and Programming
+===================================================
+
+An introduction to the fundamentals of logic and computer programming, and the roles they play in creating software solutions for any problem. Logic is used to break down software instructions into
+manageable tasks, to allow for comprehensive problem-solving using computer code. Programming is the act of creating the detailed instructions used by computers to perform any specified task or required behaviour. This
+course covers the process of creating logical designs and implementing them as programmatic code to build computer software programs.
+
+Throughout the course, **Python** will be used as the language of choice.  Examples may be shown from other languages.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   variables_data_types/index
+   slicing/index
+   control_statements/index
+   functionsAndClasses/index
+   modulesPackages/index
+   fileInteractions/index
+   resources/index 
+   
+
+
+Course Learning Outcomes
+-------------------------
+
+Learners are required to successfully complete each course outcome. In keeping with NSCC’s approach to portfolio  learning, learners will have demonstrated the ability to:
+
+   1. Translate logic principles into programming code to solve problems.
+   2. Store data inside the various data structures of a software application to achieve any specified task.
+   3. Build conditional tests in a software application to enact any required program behaviours.
+   4. Use modular design principles to create software applications with increased efficiency and maintainable code.
+   5. Design and implement iteration blocks within a software application to achieve efficiency of repetitive tasks.
+   6. Design applications to acquire input from various sources and to provide output to a software application user.

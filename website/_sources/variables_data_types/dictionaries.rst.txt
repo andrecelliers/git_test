@@ -1,0 +1,175 @@
+.. role:: p(code)
+   :language: python
+
+.. _dictionaries:
+
+Dictionaries
+============
+
+Dictionaries are slightly more complex data types, they work with *key-value* pairings.  They're more complex than :ref:`lists` but do not contain the functionality that will be encountered with :ref:`classes`.
+
+To declare a simple dictionary in Python, use curly braces and use a colon to separate the key from the value:
+
+.. code-block:: python
+    
+   # A dictionary containing mountain elevations
+   mountain_elevations = {"mount jo": 3213.9, "gros mourne": 4392.1}
+
+   print(mountain_elevations)
+
+This would result in:
+
+.. code-block::
+
+   {'mount jo': 3213.9, 'gros mourne': 4392.1}
+
+Obviously we don't always want to print out the entire dictionary.  It is easy to access the value in the *key-value* using similar techniques to accessing an element in a list:
+
+.. code-block:: python
+
+   # A dictionary containing mountain elevations
+   mountain_elevations = {"mount jo": 3213.9, "gros mourne": 4392.1}
+
+   print("The elevation of Mount Jo is " + str(mountain_elevations['mount jo']) + " feet.")
+
+The output would be:
+
+.. code-block::
+
+   The elevation of Mount Jo is 3213.9 feet.
+
+Changing Key-Value Pairs in a Dictionary
+-----------------------------------------
+
+To add a *key-value* pair to a dictionary, simply declare a new key and then assign it a value:
+
+.. code-block:: python
+
+   # Existing list
+   mountain_elevations = {"mount jo": 3213.9, "gros mourne": 4392.1}
+   # Add a new value
+   mountain_elevations['whiteface'] = 4867.3
+
+   print(mountain_elevations)
+
+The new dictionary would be:
+
+.. code-block::
+
+   {'mount jo': 3213.9, 'gros mourne': 4392.1, 'whiteface': 4867.3}
+
+To modify a *key-value* pair, the process is similar to adding, but instead simply change the value:
+
+.. code-block:: python
+
+   # Existing list
+   mountain_elevations = {"mount jo": 3213.9, "gros mourne": 4392.1, "whiteface":4867.3}
+   # Modify a  value
+   mountain_elevations['gros mourne'] = 4387.1
+
+   print(mountain_elevations)
+
+The modified value appears in the dictionary:
+
+.. code-block::
+
+   {'mount jo': 3213.9, 'gros mourne': 4387.1, 'whiteface': 4867.3}
+
+There is also a way to remove *key-value* pairs:
+
+.. code-block:: python
+
+   # Existing list
+   mountain_elevations = {"mount jo": 3213.9, "gros mourne": 4392.1, "whiteface":4867.3}
+   # Delete a key-value pair
+   del mountain_elevations['gros mourne']
+
+   print(mountain_elevations)
+
+The *key-value* pair is now removed from the dictionary:
+
+.. code-block::
+
+   {'mount jo': 3213.9, 'whiteface': 4867.3}
+
+Nesting Dictionaries
+--------------------
+
+Lists Containing Dictionaries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It is possible to nest dictionaries within both lists and dictionaries.  For example, if we created a list of enemies in a video game, they could be grouped in a list of enemies:
+
+.. code-block:: python
+
+   infantry = {'name':'infantry', 'weapon':'a sword', 'hitpoints':50, 'damageInflicted':5, 'killPoints':30}
+   archer = {'name':'archer', 'weapon':'arrows', 'hitpoints':20, 'damageInflicted':10, 'killPoints':20}
+   catapult = {'name':'catapult', 'weapon':'flying rocks', 'hitpoints':10, 'killPoints':50}
+
+   enemies = [infantry, archer, catapult]
+
+   for enemy in enemies:
+      print("When facing the " + enemy['name'].title() + 
+         ", this enemy will try to kill you with " + enemy['weapon'].lower() +
+         "! However, once you defeat the " + enemy['name'] + ", you will gain " + str(enemy['killPoints']) + " points.")
+
+This would print out the enemies in the list:
+
+.. code-block::
+
+   When facing the Infantry, it will try to kill you with a sword! Once you defeat the infantry, you will gain 30 points.
+   When facing the Archer, it will try to kill you with arrows! Once you defeat the archer, you will gain 20 points.
+   When facing the Catapult, it will try to kill you with flying rocks! Once you defeat the catapult, you will gain 50 points.
+
+
+It is also possible to perform the same type of operation without formally naming each dictionary.  The following example would produce exactly the same output:
+
+.. code-block::
+
+   enemies = [
+         {'name':'infantry', 'weapon':'a sword', 'hitpoints':50, 'damageInflicted':5, 'killPoints':30},
+         {'name':'archer', 'weapon':'arrows', 'hitpoints':20, 'damageInflicted':10, 'killPoints':20},
+         {'name':'catapult', 'weapon':'flying rocks', 'hitpoints':10, 'killPoints':50} 
+   ]
+
+   for enemy in enemies:
+      print("When facing the " + enemy['name'].title() + 
+         ", this enemy will try to kill you with " + enemy['weapon'].lower() +
+         "! However, once you defeat the " + enemy['name'] + ", you will gain " + str(enemy['killPoints']) + " points.")
+
+Dictionaries Containing Lists
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Dictionaries can also contain lists as their *values* (not as *keys*).  For example:
+
+.. code-block:: python
+
+   myPizza = {
+      'crust':'stuffed',
+      'toppings':['pepperoni', 'bacon', 'green pepper']
+   }
+
+   print("Your pizza will be a " + myPizza['crust'].title() + "-crust with the following toppings:")
+   for topping in myPizza['toppings']:
+      print("\t-> " + topping.title())
+
+This will print out a message about the pizza that was ordered to the end user:
+
+.. code-block:: 
+
+   Your pizza will be a Stuffed-crust with the following toppings:
+      -> Pepperoni
+      -> Bacon
+      -> Green Pepper
+
+\*Credit for above example: *Python Crash Course* by Eric Matthes, page 112.
+
+Resources
+---------
+
+.. figure:: https://img.youtube.com/vi/XCcpzWs-CI4/maxresdefault.jpg
+    :width: 500
+    :alt: Socratica - Python Dictionaries 
+    :target: https://youtu.be/XCcpzWs-CI4
+
+    Socratica - Python Dictionaries

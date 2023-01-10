@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>os Module &mdash; Programming 1700 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom_styles.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="sqlite3 Module" href="sqlite3.html" />
+    <link rel="prev" title="logging Module" href="logging.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Programming 1700
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../variables_data_types/index.html">Variables and Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../slicing/index.html">Slicing Python Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../control_statements/index.html">Control Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../functionsAndClasses/index.html">Functions &amp; Classes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Modules &amp; Packages</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Core Python Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="datetime.html"><code class="code highlight p python docutils literal highlight-python"><span class="n">datetime</span></code> Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging.html"><code class="code highlight p python docutils literal highlight-python"><span class="n">logging</span></code> Module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="code highlight p python docutils literal highlight-python"><span class="n">os</span></code> Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sqlite3.html"><code class="code highlight p python docutils literal highlight-python"><span class="n">sqlite3</span></code> Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="statistics.html"><code class="code highlight p python docutils literal highlight-python"><span class="n">statistics</span></code> Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subprocess.html"><code class="code highlight p python docutils literal highlight-python"><span class="n">subprocess</span></code> Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webbrowser.html"><code class="code highlight p python docutils literal highlight-python"><span class="n">webbrowser</span></code> Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pythonPackages/index.html">Python Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../fileInteractions/index.html">File Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/index.html">Programming Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Programming 1700</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Modules &amp; Packages</a> &raquo;</li>
+          <li><a href="index.html">Core Python Modules</a> &raquo;</li>
+      <li><code class="code highlight p python docutils literal highlight-python"><span class="n">os</span></code> Module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/modulesPackages/coreModules/os.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="os-module">
+<h1><code class="code highlight p python docutils literal highlight-python"><span class="n">os</span></code> Module<a class="headerlink" href="#os-module" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/os.html?highlight=os#module-os">Offical Documentation for the OS module</a></p></li>
+</ul>
+<p>One of the most important modules for DevOps practitioners - the <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span></code> module is a portable way of using operating system dependent functionality.  In a standard installation of Linux, it can be found at <code class="code highlight p python docutils literal highlight-python"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">os</span><span class="o">.</span><span class="n">py</span></code>.</p>
+<p>A lot of the functionality that is built into UNIX and Linux systems is mirrored in <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span></code>.  For example, to list the contents of the current directory:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Which would list the contents of the current directory in a Python <a class="reference internal" href="../../variables_data_types/lists.html#lists"><span class="std std-ref">Lists</span></a>.</p>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h2>
+<p>Like other Python modules, a simple <code class="code highlight p python docutils literal highlight-python"><span class="kn">import</span> <span class="nn">os</span></code> at the top of the Python program will make it methods available in the program.  The most basic usage of <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span></code> would be to print the current working directory:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The current working directory is: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Which would return the current working directory, such as <code class="code highlight p python docutils literal highlight-python"><span class="n">The</span> <span class="n">current</span> <span class="n">working</span> <span class="n">directory</span> <span class="ow">is</span> <span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">prog1700</span><span class="o">/</span><span class="n">Documents</span></code></p>
+<p>To switch directories, use <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;&lt;path&gt;&#39;</span><span class="p">)</span></code>, passing the target path as a string:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The current working directory is: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;/home/prog1700/Desktop&#39;</span><span class="p">)</span> <span class="c1"># no output</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The current working directory is: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This would show the new working directory:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>The current working directory is : /home/prog1700/Documents
+The current working directory is : /home/prog1700/Desktop
+</pre></div>
+</div>
+</section>
+<section id="working-with-directories">
+<h2>Working with Directories<a class="headerlink" href="#working-with-directories" title="Permalink to this heading"></a></h2>
+<section id="making-directories">
+<h3>Making Directories<a class="headerlink" href="#making-directories" title="Permalink to this heading"></a></h3>
+<p>The <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span></code> module is capable of making directories to store files such as logs in.  There are two main functions, <code class="code highlight p python docutils literal highlight-python"><span class="n">makedir</span></code> and <code class="code highlight p python docutils literal highlight-python"><span class="n">mkdirs</span></code>.  The difference between these two is that <code class="code highlight p python docutils literal highlight-python"><span class="n">mkdir</span></code> can only create a directory if a parent is present, whereas <code class="code highlight p python docutils literal highlight-python"><span class="n">makedirs</span></code> will create the parent structure as needed.  For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;/home/prog1700/Desktop/myNewDirectory/&#39;</span><span class="p">)</span> <span class="c1"># will work</span>
+<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;/home/prog1700/Desktop/newParentDirectory/myNewDirectory&#39;</span><span class="p">)</span> <span class="c1"># will fail</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;/home/prog1700/Desktop/newParentDirectory/myNewDirectory&#39;</span><span class="p">)</span> <span class="c1"># will succeed</span>
+</pre></div>
+</div>
+<p>Both <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">()</span></code> and <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span><span class="o">.</span><span class="n">makdirs</span></code> will fail if the directory already exists (a very common scenario when running a program that generates logs).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">()</span></code> with caution.  It is notorious for creating difficult-to-track logical errors.  If the directory structure does not exist, it will be created, even if there is an error in the path.  So it would be very easy to create <code class="code highlight p python docutils literal highlight-python"><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">prg1700</span><span class="o">/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">newParentDirectory</span><span class="o">/</span><span class="n">myNewDirectory</span></code> (note the missing “o” in “prog”).</p>
+</div>
+</section>
+<section id="removing-directories">
+<h3>Removing Directories<a class="headerlink" href="#removing-directories" title="Permalink to this heading"></a></h3>
+<p>Getting rid of <strong>empty</strong> directories is also possible.  The <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">()</span></code> and <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span><span class="o">.</span><span class="n">removedirs</span><span class="p">()</span></code> functions work in the same way as making directories above - the <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span><span class="o">.</span><span class="n">rmdir</span></code> will only remove one directory, wherease the <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span><span class="o">.</span><span class="n">removedirs</span><span class="p">()</span></code> will remove all the parent structure as well.  For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">&#39;myNewDirectory&#39;</span><span class="p">)</span> <span class="c1"># will only remove target directory</span>
+                           <span class="c1"># assuming current working directory is /home/prog1700/Desktop/myNewDirectory&#39;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">removedirs</span><span class="p">(</span><span class="s1">&#39;/home/prog1700/Desktop/newParentDirectory/myNewDirectory&#39;</span><span class="p">)</span> <span class="c1"># will remove all empty directories in the path</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Both <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">()</span></code> and <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span><span class="o">.</span><span class="n">removedirs</span><span class="p">()</span></code> only work with <strong>empty</strong> directories.  As soon as a directory contains either a file or another directory, the command will fail (or, in the case of <code class="code highlight p python docutils literal highlight-python"><span class="n">os</span><span class="o">.</span><span class="n">removedirs</span><span class="p">()</span></code> stop recursively walking up the file tree).  Therefore, it is possible to use either relative or absolute paths with these functions, as long as the target directories are empty.</p>
+</div>
+</section>
+</section>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this heading"></a></h2>
+<figure class="align-default" id="id1">
+<a class="reference external image-reference" href="https://youtu.be/tJxcKyFMTGo"><img alt="Corey Schafer - Python Tutorial: OS Module - Use Underlying Operating System Functionality" src="https://img.youtube.com/vi/tJxcKyFMTGo/maxresdefault.jpg" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-text">Corey Schafer - Python Tutorial: OS Module - Use Underlying Operating System Functionality</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="logging.html" class="btn btn-neutral float-left" title="logging Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sqlite3.html" class="btn btn-neutral float-right" title="sqlite3 Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Brad Penney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Functions &mdash; Programming 1700 1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom_styles.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python Classes" href="classes.html" />
+    <link rel="prev" title="Functions &amp; Classes" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Programming 1700
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../variables_data_types/index.html">Variables and Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slicing/index.html">Slicing Python Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../control_statements/index.html">Control Statements</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Functions &amp; Classes</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Python Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html">Python Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modulesPackages/index.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fileInteractions/index.html">File Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/index.html">Programming Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Programming 1700</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Functions &amp; Classes</a> &raquo;</li>
+      <li>Python Functions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/functionsAndClasses/functions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-functions">
+<span id="functions"></span><h1>Python Functions<a class="headerlink" href="#python-functions" title="Permalink to this heading"></a></h1>
+<p>A function is reusable block of code that performs a single task and can be used repeatedly in programs.  In Python, a basic function can be declared as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">addNumbers</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+   <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+</pre></div>
+</div>
+<p>The above example, the following items should be noted:</p>
+<ul>
+<li><p>The <code class="code highlight p python docutils literal highlight-python"><span class="k">def</span></code> keyword declares the start of a function</p></li>
+<li><p>The name of this function is <code class="code highlight p python docutils literal highlight-python"><span class="n">addNumbers</span></code></p></li>
+<li><p>The function accepts two arguments, <code class="code highlight p python docutils literal highlight-python"><span class="n">a</span></code> and <code class="code highlight p python docutils literal highlight-python"><span class="n">b</span></code>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Each argument can be labelled to show the expected data type (i.e. <code class="code highlight p python docutils literal highlight-python"><span class="n">a</span><span class="p">:</span><span class="nb">int</span></code> shows that the <code class="code highlight p python docutils literal highlight-python"><span class="n">a</span></code> argument is expecting an <code class="code highlight p python docutils literal highlight-python"><span class="nb">int</span></code>).</p></li>
+<li><p>The <code class="code highlight p python docutils literal highlight-python"><span class="o">-&gt;</span> <span class="nb">int</span></code> declares what the function will <code class="code highlight p python docutils literal highlight-python"><span class="k">return</span></code> (see below).</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Similar to other Python constructs, the declaration line ends with a colon (<code class="code highlight p python docutils literal highlight-python"><span class="p">:</span></code>).</p></li>
+<li><p>In standard circumstances, a Python function will <code class="code highlight p python docutils literal highlight-python"><span class="k">return</span></code> a value</p></li>
+</ul>
+<p>Functions are useful for repeated actions.  A famous principle of software development is “Don’t Repeat Yourself” (aka DRY code).  As an example, writing the same message to multiple users could be performed as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">user1</span> <span class="o">=</span> <span class="s2">&quot;Carl&quot;</span>
+<span class="n">user2</span> <span class="o">=</span> <span class="s2">&quot;Jim&quot;</span>
+<span class="n">user3</span> <span class="o">=</span> <span class="s2">&quot;Fred&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Greetings &quot;</span> <span class="o">+</span> <span class="n">user1</span> <span class="o">+</span> <span class="s2">&quot;, welcome to this program.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Greetings &quot;</span> <span class="o">+</span> <span class="n">user2</span> <span class="o">+</span> <span class="s2">&quot;, welcome to this program.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Greetings &quot;</span> <span class="o">+</span> <span class="n">user3</span> <span class="o">+</span> <span class="s2">&quot;, welcome to this program.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Clearly, the same lines are being repeated over and over.  This could be re-written as a function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">user</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+   <span class="k">return</span> <span class="s2">&quot;Greetings &quot;</span> <span class="o">+</span> <span class="n">user</span> <span class="o">+</span> <span class="s2">&quot;, welcome to this program.&quot;</span>
+
+<span class="n">user1</span> <span class="o">=</span> <span class="s2">&quot;Carl&quot;</span>
+<span class="n">user2</span> <span class="o">=</span> <span class="s2">&quot;Jim&quot;</span>
+<span class="n">user3</span> <span class="o">=</span> <span class="s2">&quot;Fred&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="n">user1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="n">user2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="n">user3</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Both of these examples will have the same output, but using the function will require less effort for the programmer and be much more robust and maintainable:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Greetings</span> <span class="n">Carl</span><span class="p">,</span> <span class="n">welcome</span> <span class="n">to</span> <span class="n">this</span> <span class="n">program</span><span class="o">.</span>
+<span class="n">Greetings</span> <span class="n">Jim</span><span class="p">,</span> <span class="n">welcome</span> <span class="n">to</span> <span class="n">this</span> <span class="n">program</span><span class="o">.</span>
+<span class="n">Greetings</span> <span class="n">Fred</span><span class="p">,</span> <span class="n">welcome</span> <span class="n">to</span> <span class="n">this</span> <span class="n">program</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Functions &amp; Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classes.html" class="btn btn-neutral float-right" title="Python Classes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Brad Penney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

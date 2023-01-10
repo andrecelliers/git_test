@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modules &amp; Packages &mdash; Programming 1700 1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom_styles.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Core Python Modules" href="coreModules/index.html" />
+    <link rel="prev" title="Python Classes" href="../functionsAndClasses/classes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Programming 1700
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../variables_data_types/index.html">Variables and Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slicing/index.html">Slicing Python Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../control_statements/index.html">Control Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functionsAndClasses/index.html">Functions &amp; Classes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modules &amp; Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="coreModules/index.html">Core Python Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pythonPackages/index.html">Python Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fileInteractions/index.html">File Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/index.html">Programming Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Programming 1700</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Modules &amp; Packages</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modulesPackages/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="modules-packages">
+<h1>Modules &amp; Packages<a class="headerlink" href="#modules-packages" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Section Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="coreModules/index.html">Core Python Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pythonPackages/index.html">Python Packages</a></li>
+</ul>
+</div>
+<section id="page-contents">
+<h2>Page Contents<a class="headerlink" href="#page-contents" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#importing-modules-and-packages"><span class="std std-ref">Importing Modules and Packages</span></a></p></li>
+<li><p><a class="reference internal" href="#run-code-explicitly"><span class="std std-ref">Run Code Explicitly</span></a></p></li>
+<li><p><a class="reference internal" href="#python-s-built-in-documentation"><span class="std std-ref">Python’s Built-In Documentation</span></a></p></li>
+</ul>
+<p>In a standard installation of Linux, Python can be found at <code class="code highlight p python docutils literal highlight-python"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span></code>.  Python is actually written in the <code class="code highlight p python docutils literal highlight-python"><span class="n">C</span></code> programming language (by <a class="reference external" href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a>).</p>
+<p>The <a class="reference external" href="https://docs.python.org/3/">Python Documentation</a> website contains information about all the amazing functionality that is built into the Python programming language.</p>
+<p>The <a class="reference external" href="https://pypi.org/">Python Package Index (PyPI)</a> helps you find and intall Python packages developed and shared by the Python community.</p>
+</section>
+<section id="importing-modules-and-packages">
+<h2>Importing Modules and Packages<a class="headerlink" href="#importing-modules-and-packages" title="Permalink to this heading"></a></h2>
+<p>To import any module or package, simply add the import statement at the top of the Python file.  For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span> <span class="k">as</span> <span class="nn">l</span>
+</pre></div>
+</div>
+<p>The <code class="code highlight p python docutils literal highlight-python"><span class="k">as</span> <span class="n">l</span></code> part of this statement is purely programmer convenience, as <code class="code highlight p python docutils literal highlight-python"><span class="n">l</span></code> can now be appended to the beginning of any <code class="code highlight p python docutils literal highlight-python"><span class="n">logging</span></code> function, saving a few keystrokes and possibly making the code more legible for other programmers.</p>
+</section>
+<section id="run-code-explicitly">
+<h2>Run Code Explicitly<a class="headerlink" href="#run-code-explicitly" title="Permalink to this heading"></a></h2>
+<p>When importing a module or package at the top of a program, it is important to know that Python runs the code being imported when it encounters that line.  This could have disasterous results if the imported code generated unexpected output, seemingly without being called.</p>
+<p>To safeguard against this, most programmers use a simple convention so that the main function of any program will only run if it is explicitly called or the program is being run directly via Python (not being imported).  The line is simply:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+      <span class="n">main</span><span class="p">()</span> <span class="c1"># Also a convention, could be called something different!</span>
+</pre></div>
+</div>
+<p>When an application is run, Python generates a name for the program and stores it in the <code class="code highlight p python docutils literal highlight-python"><span class="vm">__name__</span></code> variable.  By default, this is <code class="code highlight p python docutils literal highlight-python"><span class="n">__main__</span></code>.  Therefore, when imported a module or package should generate nothing, but rather initialize the included functions/classes so they can be used by the program importing them.</p>
+<p>For more information, please watch Corey Schafer’s excellent explanation:</p>
+<figure class="align-default" id="id1">
+<a class="reference external image-reference" href="https://youtu.be/sugvnHA7ElY"><img alt="Corey Schafer - Python Tutorial: :p:`if  __name__ == '__main__'`" src="https://img.youtube.com/vi/sugvnHA7ElY/maxresdefault.jpg" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-text">Corey Schafer - Python Tutorial: <code class="code highlight p python docutils literal highlight-python"><span class="k">if</span>  <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span></code></span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="python-s-built-in-documentation">
+<h2>Python’s Built-In Documentation<a class="headerlink" href="#python-s-built-in-documentation" title="Permalink to this heading"></a></h2>
+<p>Python has significant documentation built into the language.  This can be accessed using the Python Integrated Development and Learning Environment (IDLE).  In Linux, this is accessed by opening the terminal application and running the <code class="code highlight p python docutils literal highlight-python"><span class="n">python3</span></code> command:</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/python_IDLE.png" src="../_images/python_IDLE.png" />
+<figcaption>
+<p><span class="caption-text">Python IDLE via Command Line</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once inside the IDLE prompt, there are built-in commands that allow a developer to explore how parts of the Python language works.  The <code class="code highlight p python docutils literal highlight-python"><span class="nb">dir</span><span class="p">()</span></code> method gives a starting point for exploration:</p>
+<figure class="align-default" id="id3">
+<img alt="../_images/python_dir.png" src="../_images/python_dir.png" />
+<figcaption>
+<p><span class="caption-text">Exploring Python using <code class="code highlight p python docutils literal highlight-python"><span class="nb">dir</span><span class="p">()</span></code></span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Calling the <code class="code highlight p python docutils literal highlight-python"><span class="nb">dir</span><span class="p">()</span></code> method on any of these components shows the available objects, classes and methods that Python contains.  For example, <code class="code highlight p python docutils literal highlight-python"><span class="nb">dir</span><span class="p">(</span><span class="n">__builtins__</span><span class="p">)</span></code> looks like this:</p>
+<figure class="align-default" id="id4">
+<img alt="../_images/python_dir_builtins.png" src="../_images/python_dir_builtins.png" />
+<figcaption>
+<p><span class="caption-text">Exploring Python Built-Ins using <code class="code highlight p python docutils literal highlight-python"><span class="nb">dir</span><span class="p">(</span><span class="n">__builtins__</span><span class="p">)</span></code></span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once a core module is imported, it is also available to be examined.  For example, after importing the <code class="code highlight p python docutils literal highlight-python"><span class="n">sqlite3</span></code> module, it appears in the <code class="code highlight p python docutils literal highlight-python"><span class="nb">dir</span><span class="p">()</span></code> call, and can examined thoroughly:</p>
+<figure class="align-default" id="id5">
+<img alt="../_images/python_dir_sqlite3.png" src="../_images/python_dir_sqlite3.png" />
+<figcaption>
+<p><span class="caption-text">Exploring the SQLite3 Core Module using <code class="code highlight p python docutils literal highlight-python"><span class="nb">dir</span><span class="p">(</span><span class="n">sqlite3</span><span class="p">)</span></code></span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>If deeper investigation into a Python object is required, the <code class="code highlight p python docutils literal highlight-python"><span class="n">help</span><span class="p">()</span></code> function is used:</p>
+<figure class="align-default" id="id6">
+<img alt="../_images/python_help_sqlite3_connect_call.png" src="../_images/python_help_sqlite3_connect_call.png" />
+<figcaption>
+<p><span class="caption-text">Exploring the SQLite3 Connect Function using <code class="code highlight p python docutils literal highlight-python"><span class="n">help</span><span class="p">()</span></code></span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Which results in very helpful documentation:</p>
+<figure class="align-default" id="id7">
+<img alt="../_images/python_help_sqlite3_connect.png" src="../_images/python_help_sqlite3_connect.png" />
+<figcaption>
+<p><span class="caption-text">Built-In Documentation about the SQLite3 Connect Function</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../functionsAndClasses/classes.html" class="btn btn-neutral float-left" title="Python Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="coreModules/index.html" class="btn btn-neutral float-right" title="Core Python Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Brad Penney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

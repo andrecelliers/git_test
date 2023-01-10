@@ -1,0 +1,14 @@
+.. role:: p(code)
+   :language: python
+
+:p:`logging` Module
+====================
+
+.. figure:: https://img.youtube.com/vi/g8nQ90Hk328/maxresdefault.jpg
+    :width: 500
+    :alt: Socratica - Logging Module
+    :target: https://youtu.be/g8nQ90Hk328
+
+    Socratica - Logging Module
+
+

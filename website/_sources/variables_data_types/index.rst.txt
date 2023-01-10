@@ -1,0 +1,20 @@
+.. role:: p(code)
+   :language: python
+
+
+Variables and Data Types
+========================
+
+The foundational building block of (all) programming languages are *variables*.  They are often described as "buckets" to novice programmers - a place where various data (values) can be stored and retrieved by the program while it executes.
+
+Python has several different types of variables, each designed to hold a different kind of data.  These include:
+
+.. toctree::
+   :maxdepth: 1
+   
+   strings
+   integers
+   floats
+   lists
+   tuples
+   dictionaries

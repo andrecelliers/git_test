@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>for Loops &mdash; Programming 1700 1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom_styles.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="while Loops" href="whileLoops.html" />
+    <link rel="prev" title="if Statements" href="ifStatements.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Programming 1700
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../variables_data_types/index.html">Variables and Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slicing/index.html">Slicing Python Variables</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Control Statements</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ifStatements.html"><code class="code highlight p python docutils literal highlight-python"><span class="k">if</span></code> Statements</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whileLoops.html"><code class="code highlight p python docutils literal highlight-python"><span class="k">while</span></code> Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loopingOverAFunction.html"><code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> Loop Over a Function</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../functionsAndClasses/index.html">Functions &amp; Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modulesPackages/index.html">Modules &amp; Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fileInteractions/index.html">File Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/index.html">Programming Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Programming 1700</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Control Statements</a> &raquo;</li>
+      <li><code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> Loops</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/control_statements/forLoops.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="for-loops">
+<h1><code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> Loops<a class="headerlink" href="#for-loops" title="Permalink to this heading"></a></h1>
+<p>The real power of computers is that they can repeat the same action billions of times without complaint or fatigue.  In Python (as most other languages), programmers can use a <code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> loop to repeatedly execute a block of code.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Like most Python syntax, <code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> loops are white-space sensitive.  The lines indented below the initializing <code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> loop line will be included in the loop, while those which are below but not indented will not be part of the <code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> loop.</p>
+</div>
+<p>The keyword <code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> signals that a loop is being initialized, with the keyword <code class="code highlight p python docutils literal highlight-python"><span class="ow">in</span></code> indicating what is being looped over. A <code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> loop can be created as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;abc&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">A</span>
+<span class="n">B</span>
+<span class="n">C</span>
+</pre></div>
+</div>
+<p>In the above example, The <code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> loop repeatedly printed each individual element in the string, converting each element of the string to uppercase using the <code class="code highlight p python docutils literal highlight-python"><span class="n">upper</span><span class="p">()</span></code> string method.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The variable that comes after <code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> is known as the <em>iterator</em>.  When looping (iterating) over a list, it is common to use the singular form of the list name (i.e. <code class="code highlight p python docutils literal highlight-python"><span class="n">book</span></code> may iterate over list <code class="code highlight p python docutils literal highlight-python"><span class="n">books</span></code>).  Another common convention is to use the letter <code class="code highlight p python docutils literal highlight-python"><span class="n">i</span></code>, short for <em>iterator</em>.</p>
+</div>
+<section id="looping-over-lists">
+<h2>Looping Over Lists<a class="headerlink" href="#looping-over-lists" title="Permalink to this heading"></a></h2>
+<p><a class="reference internal" href="../variables_data_types/lists.html#lists"><span class="std std-ref">Lists</span></a> and <code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> loops are often combined.  It is extremely common to declare a list and then iterate over it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">favBooks</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mastery&#39;</span><span class="p">,</span> <span class="s1">&#39;the signal and the noise&#39;</span><span class="p">,</span> <span class="s1">&#39;the organized mind&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My favourite books include:)</span>
+<span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">favBooks</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">book</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">My</span> <span class="n">favourite</span> <span class="n">books</span> <span class="n">include</span><span class="p">:</span>
+    <span class="n">Mastery</span>
+    <span class="n">The</span> <span class="n">Signal</span> <span class="n">And</span> <span class="n">The</span> <span class="n">Noise</span>
+    <span class="n">The</span> <span class="n">Organized</span> <span class="n">Mind</span>
+</pre></div>
+</div>
+<section id="for-loops-and-the-range-function">
+<h3><code class="code highlight p python docutils literal highlight-python"><span class="k">for</span></code> Loops and the <code class="code highlight p python docutils literal highlight-python"><span class="nb">range</span><span class="p">()</span></code> Function<a class="headerlink" href="#for-loops-and-the-range-function" title="Permalink to this heading"></a></h3>
+<p>It is very common to loop over a <code class="code highlight p python docutils literal highlight-python"><span class="nb">range</span><span class="p">()</span></code> function to create a list of numbers:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Which would output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">6</span>
+<span class="mi">7</span>
+<span class="mi">8</span>
+<span class="mi">9</span>
+<span class="mi">10</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a very common source of the <em>“off by one”</em> error - remember that the <code class="code highlight p python docutils literal highlight-python"><span class="nb">range</span><span class="p">()</span></code> function stops <em>before</em> the last number - so counting from 1 to 10 means designating a range of 1 to 11.</p>
+</div>
+<p><code class="code highlight p python docutils literal highlight-python"><span class="nb">range</span><span class="p">()</span></code> also accepts a third parameter, which indicates what the output should count by (i.e. count by 2, count by 3, etc.). Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Would result print out all the odd numbers up to 20, as it started counting from 1 and adds 2 each time:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">3</span>
+<span class="mi">5</span>
+<span class="mi">7</span>
+<span class="mi">9</span>
+<span class="mi">11</span>
+<span class="mi">13</span>
+<span class="mi">15</span>
+<span class="mi">17</span>
+<span class="mi">19</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="looping-over-dictionaries">
+<h2>Looping Over Dictionaries<a class="headerlink" href="#looping-over-dictionaries" title="Permalink to this heading"></a></h2>
+<p>You can loop over <a class="reference internal" href="../variables_data_types/dictionaries.html#dictionaries"><span class="std std-ref">Dictionaries</span></a> as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phone_numbers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Fred Flintstone&quot;</span><span class="p">:</span><span class="s2">&quot;+37682929928&quot;</span><span class="p">,</span><span class="s2">&quot;Barney Rubble&quot;</span><span class="p">:</span><span class="s2">&quot;+423998200919&quot;</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">phone_numbers</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Fred</span> <span class="n">Flintstone</span>
+<span class="n">Barney</span> <span class="n">Rubble</span>
+</pre></div>
+</div>
+<p>You can loop over dictionary values:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phone_numbers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Fred Flintstone&quot;</span><span class="p">:</span><span class="s2">&quot;+37682929928&quot;</span><span class="p">,</span><span class="s2">&quot;Barney Rubble&quot;</span><span class="p">:</span><span class="s2">&quot;+423998200919&quot;</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">phone_numbers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="mi">37682929928</span>
+<span class="o">+</span><span class="mi">423998200919</span>
+</pre></div>
+</div>
+<p>It is also possible to loop over dictionary items:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phone_numbers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Fred Flintstone&quot;</span><span class="p">:</span><span class="s2">&quot;+37682929928&quot;</span><span class="p">,</span><span class="s2">&quot;Barney Rubble&quot;</span><span class="p">:</span><span class="s2">&quot;+423998200919&quot;</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">phone_numbers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Fred</span> <span class="n">Flintstone</span> <span class="o">+</span><span class="mi">37682929928</span>
+<span class="n">Barney</span> <span class="n">Rubble</span> <span class="o">+</span><span class="mi">423998200919</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ifStatements.html" class="btn btn-neutral float-left" title="if Statements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="whileLoops.html" class="btn btn-neutral float-right" title="while Loops" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Brad Penney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

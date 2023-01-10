@@ -1,0 +1,25 @@
+.. role:: p(code)
+   :language: python
+
+.. _lists:
+
+Lists
+======
+
+Lists are one of the most useful data types in Python - they are used extensively throughout most Python programs.  Lists consist of a mutable (changable) array of values:
+
+.. code-block:: python
+    
+    users = ["Jim", "Dwight", "Michael"]
+    distanceInKms = [32, 97, 51, 403, 21, 53, 81]
+    mixedTypes = ["Jim", 23, 3.14, True, "Berzerk"]
+
+Lists can be sliced, see :ref:`slicing` for more details.
+
+.. figure:: https://img.youtube.com/vi/AhSvKGTh28Q/maxresdefault.jpg
+    :width: 500
+    :alt: Socratica: Classes in Python
+    :target: https://youtu.be/AhSvKGTh28Q
+
+    Socratica: List Comprehensions
+

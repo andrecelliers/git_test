@@ -1,0 +1,105 @@
+.. role:: p(code)
+   :language: python
+
+.. _strings:
+
+Strings
+=======
+
+Whenever a Python uses a block of text (of any size) it is called a :p:`string`.  They are always surrounded by either single quotes (:p:`'myString'`) or double quotes (:p:`"myString"`).  
+
+Strings have many built-in methods (manipulators) in Python, such as changing the letters to upper / lower case or breaking up (slicing) a string based on white space (or any character).
+
+Strings can be sliced, see :ref:`slicing` for more details.
+
+Strings are declared as follows:
+
+.. code-block:: python
+    
+    # Declaring basic strings
+    myName = "Brad"
+    location = 'Bridgewater'
+    occupation = 'IT Specialist'
+
+.. note::
+
+    Strings can be surrounded by either single quotes (:p:`''`) or double quotes (:p:`""`).  If for some reason, a string must include both single and double quotes, backslash (\\) can be used as escape character.  This forces Python to interpret the character following the backslash literally, thereby ignoring the quotes.
+
+String Methods
+--------------
+
+Strings can accept methods which alter the contents of the string.  Some examples of string methods that are built into Python include:
+
+.. code-block:: python
+
+    bookTitle = "mastery by Robert greene"
+    print(bookTitle.upper())
+    print(bookTitle.lower())
+    print(bookTitle.title())
+
+Would output:
+
+.. code-block:: python
+
+    MASTERY BY ROBERT GREENE
+    mastery by robert greene
+    Mastery By Robert Greene
+
+Concatenating Strings
+---------------------
+
+Strings can be combined together with simple plus (:p:`+`) signs:
+
+.. code-block:: python
+
+    firstName = "Albert"
+    lastName = "Einstien"
+    print("There was a famous scientist named " + firstName + lastName)
+
+Output:
+
+.. code-block:: python
+
+    There was a famous scientist named Albert Einstien.
+
+Adding & Removing Whitespace
+----------------------------
+
+Special characters can be added to strings that add whitespace.  These include:
+
+#. :p:`\t` which adds a tab (4 spaces)
+#. :p:`\n` which adds a newline
+
+Example:
+
+.. code-block:: python
+
+    print("Hello, I'm \n \t \t Brad!")
+
+Which outputs:
+
+.. code-block:: 
+
+    Hello, I'm
+                 Brad!
+
+Whitespace can also be stripped out using methods (see `String Methods`_ above).  These include :p:`strip()` (both sides), :p:`rstrip()` (right side) and :p:`lstrip` (left side).
+
+Example:
+
+.. code-block:: python
+
+    name = "      Albert Einstein       "
+    print("Hello I am " + name + ".") # whitespace remains
+    print("Hello I am " + name.strip() + ".") # whitespace stripped
+    print("Hello I am " + name.rstrip() + ".") # whitespace on righ stripped
+    print("Hello I am " + name.lstrip() + ".") # whitespace on left stripped
+
+Which would output:
+
+.. code-block:: python
+
+    Hello I am       Albert Einstein       .
+    Hello I am Albert Einstein.
+    Hello I am       Albert Einstein.
+    Hello I am Albert Einstein       .

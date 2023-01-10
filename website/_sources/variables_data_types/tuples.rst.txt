@@ -1,0 +1,18 @@
+.. role:: p(code)
+   :language: python
+
+.. _tuples:
+
+Tuples
+======
+
+Similar to :ref:`Lists`, a :p:`tuple` is a collection of data in Python.  Unlike a :p:`list`, however, a :p:`tuple` cannot be changed once it is declared.  Methods such as :p:`append()` and :p:`pop()` cannot be used with a :p:`tuple`.  This makes a :p:`tuple` the ideal place to store values that should not change, such as the results from a :p:`SELECT` statement (:p:`SQL`)l which will be used in the Python program but not altered. 
+
+Creating a :p:`tuple` is similar to a :p:`list`, but instead of square brackets, parenthesis are used:
+
+.. code-block:: python
+
+    servers = ('web01', 'web02', 'app01', 'db01')
+    ages = (12, 19, 32, 41)
+
+Tuples can be sliced, see :ref:`slicing` for more details.
